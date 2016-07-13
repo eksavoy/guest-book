@@ -1,0 +1,11 @@
+image: docker:latest
+
+services:
+  - docker:dind
+
+build:
+  stage: build
+  script:
+    - docker login -u elerion -p Hjz7mLIG
+    - docker build -t elerion/guest-book-front .
+    - docker push elerion/guest-book-front

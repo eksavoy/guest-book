@@ -1,0 +1,5 @@
+<app-add-guest></app-add-guest>
+<md-card *ngFor="let guest of guests" style="margin-top: 1%; background-color: #00B9FF;">
+  <h2>{{guest.author}}</h2>
+  <p>{{guest.message}}</p>
+</md-card>

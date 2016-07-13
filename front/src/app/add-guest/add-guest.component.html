@@ -1,0 +1,8 @@
+<button md-fab color="primary">
+  <md-icon class="md-24" (click)="activeForm()">add</md-icon>
+</button>
+<form *ngIf="formActive" (ngSubmit)="onSubmit()" #guestForm="ngForm" style="margin-top:1%">
+  <md-input placeholder="Author" [(ngModel)]="author" name="author"></md-input>
+  <md-input placeholder="Message" [(ngModel)]="guest" name="message"></md-input>
+    <button type="submit" md-raised-button color="primary">GO</button>
+</form>
